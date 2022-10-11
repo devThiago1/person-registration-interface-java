@@ -4,7 +4,9 @@ package com.SignOnSenai.personsystem.service;
 import com.SignOnSenai.personsystem.model.Person;
 import com.SignOnSenai.personsystem.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PersonServiceImpl implements PersonService {
 
     @Autowired
