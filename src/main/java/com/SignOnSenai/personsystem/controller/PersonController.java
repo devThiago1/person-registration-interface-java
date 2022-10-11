@@ -5,10 +5,9 @@ import com.SignOnSenai.personsystem.service.PersonServiceImpl;
 import com.SignOnSenai.personsystem.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateRequestCustomizer;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/person")
@@ -21,5 +20,10 @@ public class PersonController {
     public String add(@RequestBody Person person){
         personService.savePerson(person);
         return "New Person is added";
+    }
+
+    @GetMapping("/getAll")
+    public List<Person> getAllPerson(){
+        return personService.getAllPerson();
     }
 }
