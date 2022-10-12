@@ -1,7 +1,5 @@
 package com.SignOnSenai.personsystem.model;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,12 +7,16 @@ import javax.persistence.Id;
 
 @Entity
 
-public class Person {
+public class Person{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
         private String name;
         private String email;
+
+        private int cep;
+        private int tel;
+
 
     public Person() {
     }
@@ -41,5 +43,21 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getCep(){
+        return cep;
+    }
+
+    public void setCep(int cep){
+        this.cep = cep;
+    }
+
+    public int getTel(){
+        return tel;
+    }
+
+    public void setTel(int tel){
+        this.tel = tel;
     }
 }
