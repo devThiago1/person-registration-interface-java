@@ -13,8 +13,8 @@ public class Person{
     private int id;
         private String name;
         private String email;
-        private int cep;
-        private int tel;
+        private String cep;
+        private String tel;
 
 
     public Person() {
@@ -44,19 +44,19 @@ public class Person{
         this.email = email;
     }
 
-    public int getCep(){
+    public String getCep(){
         return cep;
     }
 
-    public void setCep(int cep){
+    public void setCep(String cep){
         this.cep = cep;
     }
 
-    public int getTel(){
+    public String getTel(){
         return tel;
     }
 
-    public void setTel(int tel){
+    public void setTel(String tel){
         this.tel = tel;
     }
 }

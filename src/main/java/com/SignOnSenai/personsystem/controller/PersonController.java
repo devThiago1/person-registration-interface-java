@@ -1,10 +1,8 @@
 package com.SignOnSenai.personsystem.controller;
 
 import com.SignOnSenai.personsystem.model.Person;
-import com.SignOnSenai.personsystem.service.PersonServiceImpl;
 import com.SignOnSenai.personsystem.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.client.RestTemplateRequestCustomizer;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,5 +23,10 @@ public class PersonController {
     @GetMapping("/getAll")
     public List<Person> getAllPerson(){
         return personService.getAllPerson();
+    }
+    @DeleteMapping("/deleteAll")
+    public String delete(){
+        personService.deleteAllPerson();
+        return "People delete";
     }
 }
