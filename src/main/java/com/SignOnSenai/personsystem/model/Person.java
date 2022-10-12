@@ -13,7 +13,6 @@ public class Person{
     private int id;
         private String name;
         private String email;
-
         private int cep;
         private int tel;
 
