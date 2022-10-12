@@ -1,21 +1,22 @@
 package com.SignOnSenai.personsystem.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-
+@Table(name= "person")
 public class Person{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-        private String name;
-        private String email;
-        private String cep;
-        private String tel;
 
+    @Column(name = "name")
+    private String name;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "cep")
+    private String cep;
+    @Column(name = "tel")
+    private String tel;
 
     public Person() {
     }
